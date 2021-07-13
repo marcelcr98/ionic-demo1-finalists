@@ -11,6 +11,24 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'places',
+   // loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
+  
+    children:[
+      
+      {
+      path:"",
+      loadChildren: () => import('./places/places.module').then( m => m.PlacesPageModule)
+    },
+
+    {
+      path:":nationId",
+      loadChildren: () => import('./places/place-detail/place-detail.module').then( m => m.PlaceDetailPageModule)
+    }
+  
+  ]
+  },
 ];
 
 @NgModule({

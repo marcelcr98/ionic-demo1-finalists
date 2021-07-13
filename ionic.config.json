@@ -1,5 +1,7 @@
 {
   "name": "ionic-first-pro",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Finalistas 2021</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <!--Datos de la vista-->
+
+    <!--Scroll-->
+  <ion-list>
+
+    <!--Items-->
+    <ion-item *ngFor="let nation of nations" [routerLink]="['/places',nation.id]">
+
+      <ion-avatar solt="start">
+        <ion-img [src]="nation.imageURL">
+
+        </ion-img>
+      </ion-avatar>
+
+      {{nation.title}}
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
