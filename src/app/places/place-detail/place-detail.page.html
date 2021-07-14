@@ -1,9 +1,17 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="secondary">
+    <!--Boton inicio superior-->
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/places"></ion-back-button>
     </ion-buttons>
     <ion-title>{{nation.title}}</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="deletePlace()">
+        <ion-icon name="trash"></ion-icon>
+      </ion-button>
+
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
